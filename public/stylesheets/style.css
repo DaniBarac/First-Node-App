@@ -1,0 +1,122 @@
+html {
+  padding: 50px;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #57b4b4;
+  /* display: grid;
+  grid-template-columns: 1fr 5fr; */
+}
+
+a {
+  color: #00B7FF;
+}
+
+nav {
+  background-color: #023447;
+  height: 100%;
+  width: 300px;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  z-index: 1;
+  position: fixed;
+}
+
+nav button {
+  display: block;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width:70%;
+}
+
+nav h1 {
+  text-decoration: none;
+  display: block;
+  color:rgb(22, 148, 110);
+  font-size: 2rem;
+  left: 0;
+  margin: 2rem 0 3rem 2rem;
+}
+
+.container {
+  background-color: aquamarine;
+  width: 50%;
+
+  border:rgb(22, 148, 110) solid 3px;
+  border-radius: 1.5rem;
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-decoration: underline;
+  font-style: italic;
+  margin: 1rem 0 0 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-style: italic;
+  margin: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  text-indent: 2rem;
+}
+
+button {
+  color: rgb(31, 202, 174);
+  background-color: #025170;
+  border: solid 2px #023447;
+  border-radius: 1rem;
+  width: auto;
+  height: auto;
+  margin: .2rem;
+  padding: 10px 0 10px 0;
+
+  font-size: 1rem;
+  text-shadow: 0px 0px 4px rgb(22, 148, 110);
+}
+ 
+button:hover {
+  background-color: #5d8ea1;
+} 
+
+button:active {
+  border: solid 2px black;
+  background-color: #57b4b4;
+  text-shadow: 0px 0px 4px black;
+}
+
+@keyframes grow {
+  0% {
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+#grid{
+  overflow: hidden;
+  width: 100%;
+}
+
+.animatedDiv {
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  border: solid 2px black;
+}
+
+label {
+
+}

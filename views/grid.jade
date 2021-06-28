@@ -1,0 +1,27 @@
+extends layout 
+
+block content
+    div(class='container')
+        link(href='/stylesheets/grid.css' rel='stylesheet')
+        h1 Pathfinding algorithm visualisation
+        div(id='content')
+            div(id="controls")
+                div(id='textboxes')
+                    label(for='sizeBox') Square size
+                    input(type='text' id='sizeBox' value='15')
+                br
+                div(id='checkboxes')
+                    input(type='checkbox' id='mazeTick')
+                    label(for='mazeTick') Auto generate maze
+                br
+                div(id='gridButtons')
+                    button(class='button' id='setSource') Set the source
+                    button(class='button' id='setDest') Set the destination
+                    button(class='button' id='setWall') Set the walls
+                    button(class='button' id='start') Start
+                    button(class='button' id='reset') Reload
+            div(id="grid")
+        script(src='/js-priority-queue/priority-queue.js')
+        script(src='/javascripts/gridInput.js')
+        script(src='/javascripts/maze.js')
+        script(src='/javascripts/grid.js')

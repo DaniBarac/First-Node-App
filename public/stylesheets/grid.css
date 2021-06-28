@@ -1,0 +1,109 @@
+#gridButtons .active {
+    background-color: #5d8ea1;
+}
+
+:root {
+    --visited-color: rgb(24, 153, 212);
+    --path-color: rgb(248, 248, 34);
+    --cell-color: white;
+}
+
+@keyframes cellVisited {
+    0% {
+        background-color: var(--cell-color);
+        border-radius: 50%;
+    }
+    25% {
+        transform: scale(.1);
+        z-index: 2;
+    }
+    80% {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+    100% {
+        transform: scale(1);
+        z-index: 2;
+        border-radius: 0%;
+    }
+}
+
+@keyframes cellPath {
+    0% {
+        background-color: var(--visited-color);
+        border-radius: 50%;
+    }
+    25% {
+        transform: scale(.1);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        z-index: 2;
+        border-radius: 0%;
+    }
+}
+
+.cell {
+    overflow: visible;
+    display: inline-grid;
+    /* outline: solid 1px black; */
+    box-shadow: 0 0 0em .2px rgb(92, 92, 92) inset;
+    background-color: var(--cell-color); 
+    color: white;
+    z-index: 0;
+}
+.cell:hover {
+    overflow: visible;
+    transform: scale(1.2);
+    z-index: 2;
+    outline: solid 2px black;
+}
+#start.cell {
+    background-color: rgb(46, 243, 46);
+}
+#dest.cell {
+    background-color: rgb(255, 84, 68);
+}
+.cell.visited {
+    background-color: var(--visited-color);
+    animation-name: cellVisited;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+}
+.cell.visited.leaf {
+    background-color: rgb(194, 54, 236);
+}
+.cell.path {
+    background-color: var(--path-color);
+    animation-name: cellPath;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.cell.wall {
+    background-color: rgb(156, 156, 156); 
+    box-shadow: 0 0 0px 0.1px black inset;
+    z-index: 1;
+}
+
+div {
+    overflow: visible;
+}
+div#content {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-top: 20px
+}
+div#grid {
+    border: solid black 1px;
+}
+div#controls {
+    display: block;
+    margin: 10px;
+}
+
+button {
+    width: 100%;
+}

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    div(class="container")
+        h1 Cool map wow 
+        h2 This is your current position
+
+        script(src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js')
+        link(href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet')
+        div(id='map' style='width: 95%; height: 500px; border: solid 3px rgb(22, 148, 110); border-radius: 10px; margin: auto;')
+
+        button(class='button' id="Back") Go back
+    script(src='/javascripts/map.js')

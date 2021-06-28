@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav(class='nav')
+      h1 Navigation
+      button(class='button' id='home') Home
+      button(class='button' id='secondpage') Second Page
+      button(class='button' id='mapButt') Map
+      button(class='button' id='gridButt') Grid
+
+    script(src="/javascripts/nav.js")
+    block content
