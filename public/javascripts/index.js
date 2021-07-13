@@ -1,5 +1,5 @@
 document.getElementById("Click me").onclick = function () {
-    alert("Salut fra");
+    alert("You clicked the button");
 }
 
 document.getElementById("toSecondPage").onclick = function () {
